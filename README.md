@@ -1,4 +1,4 @@
-# Hello There! I'm Cloud & DevOps Engineer
+# Hello There! I'm a Cloud & DevOps Engineer
 
 I build **production-ready cloud systems** on AWS and Azure — automated, secure, and scalable.
 
