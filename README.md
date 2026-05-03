@@ -1,137 +1,110 @@
-# Hello There! I'm a Cloud & DevOps Engineer
+<div align="center">
 
-I build **production-ready cloud systems** on AWS and Azure — automated, secure, and scalable.
+# Ekwebelem Amarachi Janefrancis
+### Cloud & DevOps Engineer
+
+*I turn applications into production systems — automated, secure, and built to survive.*
+</div>
+
+<div align="center">
+  <img width="736" height="414" alt="Image" src="https://github.com/user-attachments/assets/f81ca817-5931-4718-bf38-6fa4f3a07b60" />
+</div>
+
+---
+---
+
+## What I Do
+
+I design and deploy cloud infrastructure that teams can trust — version-controlled, repeatable, and documented clearly enough that anyone can pick it up.
+
+My work sits at the intersection of **infrastructure engineering**, **platform automation**, and **Kubernetes operations**. I've built end-to-end pipelines that go from a `git push` to a live production deployment with zero manual steps — on AWS, with real infrastructure decisions behind every choice.
+
+What I care about:
+- Infrastructure owned by Git, not by someone's terminal session
+- Deployments that are boring because they always work
+- Documentation that actually helps the next engineer
 
 ---
 
-## About Me
+## Core Skills
 
-I'm a **Cloud & DevOps Engineer** with hands-on experience designing, deploying, and automating infrastructure across **AWS** and **Azure**.
+**Cloud**
+`AWS` &nbsp;·&nbsp; `Azure` &nbsp;·&nbsp; EC2 &nbsp;·&nbsp; EKS &nbsp;·&nbsp; AKS &nbsp;·&nbsp; S3 &nbsp;·&nbsp; RDS &nbsp;·&nbsp; ECR &nbsp;·&nbsp; Lambda &nbsp;·&nbsp; DynamoDB &nbsp;·&nbsp; CloudFront &nbsp;·&nbsp; Route 53 &nbsp;·&nbsp; IAM &nbsp;·&nbsp; VPC &nbsp;·&nbsp; EBS &nbsp;·&nbsp; CloudWatch &nbsp;·&nbsp; Azure Monitor
 
-I focus on turning applications into **reliable production systems** using Infrastructure as Code, CI/CD pipelines, containerization, and Kubernetes, with clear documentation that teams can maintain.
+**Infrastructure as Code**
+`Terraform` (modules, remote state, DynamoDB locking) &nbsp;·&nbsp; `Ansible`
 
-### What I Deliver:
+**Containers & Orchestration**
+`Docker` &nbsp;·&nbsp; `Kubernetes` &nbsp;·&nbsp; `kOps` &nbsp;·&nbsp; `Helm` &nbsp;·&nbsp; `ArgoCD` &nbsp;·&nbsp; `Calico CNI` &nbsp;·&nbsp; `Portainer`
 
-✅ **Pipeline-driven infrastructure** (repeatable, version-controlled, auditable)  
-✅ **Kubernetes deployments** with production-minded networking and security  
-✅ **Serverless backends** using managed AWS services  
-✅ **Clean documentation** (Notion + GitHub) for easy handover and collaboration
+**CI/CD & Automation**
+`GitHub Actions` &nbsp;·&nbsp; `Jenkins` &nbsp;·&nbsp; `Bash scripting`
 
----
+**Networking & Security**
+`Nginx` &nbsp;·&nbsp; `HAProxy` &nbsp;·&nbsp; `Let's Encrypt / Certbot` &nbsp;·&nbsp; `IAM / RBAC` &nbsp;·&nbsp; `SSL/TLS` &nbsp;·&nbsp; `Secrets management`
 
-## Technical Skills
-
-###  Cloud Platforms
-- **AWS**: EC2, S3, ECR, VPC, IAM, Route 53, CloudFront, CloudWatch, Lambda, DynamoDB
-- **Azure**: Resource Groups, VNets, Subnets, NSGs, AKS, Managed Identities, Role Assignments, Azure Monitor
-
-###  Infrastructure as Code
-- **Terraform** (modules, remote state, HCP Terraform)
-- **Ansible**
-
-###  Containers & Orchestration
-- **Docker** & **Docker Compose**
-- **Kubernetes** (EKS / AKS)
-- **Helm** (chart management)
-- **ArgoCD** (GitOps)
-- **Portainer**
-
-###  CI/CD & Automation
-- **GitHub Actions** (workflows, automation)
-- **Jenkins**
-- **Bash scripting**
-
-###  Networking & Web Servers
-- **NGINX** (reverse proxy, ingress)
-- **HAProxy** (load balancing)
-- **DNS** (Route 53)
-
-###  Security & Monitoring
-- **IAM/RBAC** fundamentals
-- **SSL/TLS** (Certbot, Let's Encrypt)
-- **Secrets management**
-- **CloudWatch, Azure Monitor, Datadog, Prometheus, Grafana**
-
-###  Linux & OS
-- Linux administration & system optimization
-- Bash scripting
+**Observability**
+`CloudWatch` &nbsp;·&nbsp; `Prometheus` &nbsp;·&nbsp; `Grafana` &nbsp;·&nbsp; `Datadog` &nbsp;·&nbsp; `Azure Monitor`
 
 ---
 
 ## Featured Projects
 
+### Cloud-Native TaskApp — Self-Managed Kubernetes on AWS
+`AWS` `kOps` `Terraform` `Kubernetes` `ArgoCD` `Docker` `ECR` `Flask` `React` `PostgreSQL` `Calico`
 
-### 🔹 AWS 3-Tier Terraform Deployment *(AWS)*
-**[AWS-3-Tier-Terraform-Deployment](https://github.com/Cloudcrackamara/AWS-3-Tier-Terraform-Deployment)**  
-Built a structured **3-tier AWS architecture** using Terraform modules with automation-friendly repo organization.  
-**Features**: VPC design, auto-scaling groups, RDS, load balancing, modular code.
+**[View Repository →](https://github.com/Cloudcrackamara/TaskApp-Project)** &nbsp;·&nbsp; **[Live App →](https://taskapp.taskbymara.online)**
 
-### 🔹 Serverless Todo API *(AWS)*
-**[AWS-Serverless-Todo-API](https://github.com/Cloudcrackamara/AWS-Serverless-Todo-API)**  
-Designed a scalable **serverless backend** using Lambda + DynamoDB + IAM, demonstrating event-driven architecture with managed services.  
-**Features**: API Gateway, DynamoDB tables, IAM policies, serverless best practices.
+A full-stack task management application deployed on a self-managed, highly available Kubernetes cluster — 3 control plane nodes and 3 worker nodes across 3 AWS Availability Zones, provisioned entirely with Terraform and kOps.
 
-### 🔹 DevOps Automation Project — AWS EC2 Deployments *(AWS)*
-**[DevOps-automation-project](https://github.com/Cloudcrackamara/DevOps-automation-project)**  
-Automated application deployment on AWS EC2 using **Bash scripting** and **GitHub Actions CI/CD**.  
-**Highlights**: server automation, repeatable deployment workflow, Linux fundamentals.
-
-### 🔹 Portfolio Website Deployment with CI/CD *(AWS)*
-**(https://github.com/Cloudcrackamara/)**  
-Hosted and automated deployment of portfolio website using **AWS S3** and **GitHub Actions** — updates deploy automatically on every push.  
-**Features**: S3 static hosting, CloudFront CDN, GitHub Actions automation.
+- Chose **kOps over EKS** deliberately — managing the full control plane exposes every decision that a managed service abstracts away: etcd configuration, CNI selection, node group topology
+- Provisioned 48 AWS resources from a single `terraform apply` — VPC, subnets, NAT Gateways (one per AZ), IAM, ECR, Route53, S3 state backend with DynamoDB locking
+- Configured **Calico CNI** for NetworkPolicy support — frontend pods cannot directly reach the database
+- Deployed PostgreSQL as a StatefulSet with EBS persistent storage and `Retain` policy — deleted the pod mid-session to verify data survived
+- Implemented GitOps with ArgoCD (`selfHeal: true`) — manual cluster changes are automatically reverted; Git is the only source of truth
+- Zero-downtime rolling updates enforced via `maxUnavailable: 0`
+- Debugged six simultaneous CrashLoopBackOff failures across all pods on first deployment — each had a different root cause
 
 ---
 
-## Private Repositories
-*(Available on Request)*
+### 3-Tier Banking Application — Full Cloud-Native Deployment on EKS
+`AWS` `EKS` `Terraform` `GitHub Actions` `ArgoCD` `Docker` `ECR` `RDS` `MySQL` `Route53` `React` `Node.js`
 
-- **Frontend-Bank-App** — React frontend, Docker, deployed to AWS EKS via CI/CD and GitOps
-- **Backend** — Backend API, Docker, deployed to AWS EKS via CI/CD and GitOps  
-- **Kubernetes-Manifests** — GitOps deployments with ArgoCD on AWS EKS
+A production-grade banking application deployed end-to-end on AWS — infrastructure provisioned with Terraform, applications containerized with Docker, delivered via GitOps.
+
+- Separate CI/CD pipelines for frontend and backend — each `git push` builds a Docker image, pushes to ECR, and updates the Kubernetes manifest repo with the new image tag
+- GitOps with ArgoCD: the cluster always reflects what's in Git, with automatic sync and rollback support
+- Nginx Ingress, Cert-Manager, and Route53 handling HTTPS traffic on a custom domain
+- Resolved real production issues: CORS preflight failures, Terraform state drift from unmanaged resources, and stale CI pipeline configuration
+
+> *Private repo — available on request*
+
+---
+
+### AWS 3-Tier Terraform Deployment
+`Terraform` `AWS` `VPC` `RDS` `Auto Scaling`
+
+**[View Repository →](https://github.com/Cloudcrackamara/AWS-3-Tier-Terraform-Deployment)**
+
+Structured 3-tier AWS architecture built with Terraform modules — VPC design, auto-scaling groups, RDS, and load balancing, organized for real team use.
+
+---
+
+
 
 ---
 
 ## Certifications
 
-🏆 **AWS Certified Cloud Practitioner**  
-🏆 **DigitalWitch Academy** — DevOps & Cloud Security
+| Certification | Issuer |
+|---|---|
+| AWS Certified Cloud Practitioner | Amazon Web Services |
+| DevOps & Cloud Security | DigitalWitch Academy |
 
 ---
 
-## Soft Skills
+## Connect
 
-💡 **Troubleshooting & Root Cause Analysis**  
-📢 **Communication & Team Collaboration**  
-📝 **Technical Documentation** (Notion & GitHub)  
-🚀 **Continuous Learning & Adaptability**  
-⭐ **Strong Ownership & Attention to Detail**
+Currently open to Cloud Engineer, DevOps Engineer, and Platform Engineer roles — feel free to reach out.
 
----
-
-## Connect With Me 🤝
-
-<div align="center">
-
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/ekwebelemamarachi)
-[![Email](https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:amarachi.ekwebelem0@gmail.com)
-[![Portfolio](https://img.shields.io/badge/Portfolio-000000?style=for-the-badge&logo=github&logoColor=white)](https://cloudcrackamara.com)
-
-
-</div>
-
----
-
-## Fun Fact 🎨
-
-When I'm not automating deployments, I enjoy **creating clean documentation in Notion**, designing DevOps visuals in **Canva**, and **mentoring others** learning AWS and Docker.
-
-I believe in **simplifying tech** and making cloud engineering easy to understand.
-
----
-
-<div align="center">
-
-**Built with ☁️ in the cloud, documented with 📝 precision, deployed with 🚀 confidence.**
-
-</div>
+[LinkedIn](https://www.linkedin.com/in/ekwebelemamarachi) &nbsp;·&nbsp; [Email](mailto:amarachi.ekwebelem0@gmail.com) &nbsp;·&nbsp; [Portfolio](https://cloudcrackamara.com)
